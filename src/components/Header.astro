@@ -1,0 +1,25 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+	<nav>
+		<div style="flex-grow:1;">
+			<HeaderLink href={"/"}>Markus Unkel</HeaderLink>
+		</div>
+		<div style="display: flex; gap: 20px;">
+			<HeaderLink href={"/blog"}>Blog</HeaderLink>
+			<HeaderLink href={"/freelance"}>Freelance</HeaderLink>
+			<HeaderLink href={"/about"}>About</HeaderLink>
+		</div>
+  </nav>
+</header>
+<style>
+nav {
+	margin-top: 16px;
+	font-size: 11pt;
+	display: flex;
+	border-bottom: 1px dashed var(--black);
+}
+</style>

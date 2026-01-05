@@ -1,0 +1,154 @@
+```d2 width=450 layout=elk
+direction: down
+
+
+api: Federated GraphQL API {
+  style {
+    stroke-width: 1
+  }
+}
+
+edge: Edge Layer {
+  grid-rows: 2
+  label.near: outside-top-right
+
+  storefront: Storeront
+
+  dash: Internal Dashboard
+
+  app: Mobile Apps
+
+  party: 3rd Party Services
+
+  style {
+    double-border: false
+    stroke-width: 0
+  }
+}
+
+service: Service Layer {
+  grid-rows: 2
+  label.near: outside-top-right
+
+  cms: CMS
+
+  core: Core
+
+  auth: Authentication
+
+  ecommerce: E-Commerce
+
+  notification: Notifications
+
+  customers: Key Account Specific Services
+
+  style {
+    double-border: false
+    stroke-width: 0
+  }
+}
+
+event: Messaging System {
+  width: 1000
+  style {
+    stroke-width: 1
+  }
+  shape: queue
+}
+
+
+data: Data Layer {
+  label.near: outside-top-left
+  dwh: Data Warehouse
+
+  reverse: Reverse ETL
+  etl: ETL
+
+  pipe: Customer Data\nPipeline
+
+  pipe -> dwh
+  etl -> dwh
+  dwh -> reverse
+
+  reverse -> pipe
+
+  style {
+    double-border: false
+    stroke-width: 0
+  }
+}
+
+business: Business Platforms {
+  grid-rows: 2
+  label.near: outside-top-left
+  cep: Customer Engagement Platform
+  crm: Customer Relation Platform
+
+  style {
+    double-border: false
+    stroke-width: 0
+  }
+}
+
+edge -- api
+api -- service
+service -- event
+event <-> data.pipe
+
+data.pipe <-> business
+business -> data.etl
+
+
+
+
+style {
+  fill: transparent
+}
+
+**.style {
+  bold: false
+  font-size: 32
+  text-transform: none
+  font-color: "#050315"
+  fill-pattern: none
+}
+
+*.*.style {
+  fill: "#a0a793"
+  stroke-width: 1
+}
+
+*.style {
+  fill: "#c0beae"
+  fill-pattern: none
+}
+
+
+(*** -> ***)[*] : {
+  style {
+    stroke-width: 2
+    stroke: "#050315"
+  }
+  target-arrowhead: {
+    shape: arrow
+    style {
+      filled: true
+    }
+  }
+}
+
+(*** <-> ***)[*] : {
+  style {
+    stroke-dash: 0
+    stroke-width: 2
+    stroke: "#050315"
+  }
+  target-arrowhead: {
+    shape: arrow
+    style {
+      filled: true
+    }
+  }
+}
+
+```

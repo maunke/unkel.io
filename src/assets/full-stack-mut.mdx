@@ -1,0 +1,84 @@
+```d2 width=275 layout=elk
+direction: up
+
+
+data: Data Warehouse\nBI, MarTech, CRM
+
+event: Messaging System {
+  shape: queue
+  width: 600
+}
+
+task: Task Orchestration\nMachine Learning {
+  shape: step
+}
+
+backend: Backend\n Database {
+  width: 300
+}
+
+api: API {
+  shape: hexagon
+}
+
+frontend: Frontend {
+  width: 300
+}
+
+frontend -- api
+api -- backend
+backend -- event
+backend -- data
+backend -- task
+task -- data
+data -- event
+
+task -- event
+
+style {
+  fill: transparent
+}
+
+**.style {
+  bold: false
+  font-size: 32
+  text-transform: none
+  font-color: "#050315"
+  fill-pattern: none
+}
+
+*.style {
+  fill: "#c0beae"
+  fill-pattern: none
+  stroke-width: 1
+}
+
+
+(*** -> ***)[*] : {
+  style {
+    stroke-width: 2
+    stroke: "#050315"
+  }
+  target-arrowhead: {
+    shape: arrow
+    style {
+      filled: true
+    }
+  }
+}
+
+(*** <-> ***)[*] : {
+  style {
+    stroke-dash: 0
+    stroke-width: 2
+    stroke: "#050315"
+  }
+  target-arrowhead: {
+    shape: arrow
+    style {
+      filled: true
+    }
+  }
+}
+
+```

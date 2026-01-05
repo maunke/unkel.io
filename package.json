@@ -1,0 +1,32 @@
+{
+  "name": "unkel.io",
+  "version": "1.0.0",
+  "description": "Deployment for unkel.io",
+  "homepage": "https://unkel.io",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.12",
+    "@astrojs/node": "^9.5.1",
+    "@astrojs/rss": "^4.0.14",
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.16.0",
+    "astro-custom-toc": "^2.0.46",
+    "astro-d2": "^0.8.1",
+    "katex": "^0.16.25",
+    "rehype-katex": "^7.0.1",
+    "rehype-mathjax": "^7.1.0",
+    "remark-math": "^6.0.0",
+    "sharp": "^0.34.3",
+    "uuidv7": "^1.0.2"
+  },
+  "prettier": {
+    "proseWrap": "always"
+  }
+}

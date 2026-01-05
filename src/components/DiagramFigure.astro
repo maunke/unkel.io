@@ -1,0 +1,45 @@
+---
+interface Props {
+	src: ImageMetadata;
+  fig: number;
+  caption: string;
+}
+
+const { fig, caption, width } = Astro.props;
+
+import { Image } from 'astro:assets';
+---
+
+<figure>
+  <div class="figure-img" style={`max-width: ${width}px`}>
+    <slot />
+  </div>
+  <figcaption>
+    <span style="font-style: normal;">Figure {fig}:</span> <Fragment set:html={caption} />
+  </figcaption>
+</figure>
+
+<style>
+.figure-img {
+	height: auto;
+  margin-top: 16px;
+  padding-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+figcaption {
+	font-style: italic;
+  padding: 8px 0;
+  padding-left: 4px;
+  border-top: 1px dashed var(--black);
+  font-size: 9pt;
+}
+
+figure {
+  display: block;
+  margin: 24px 0 16px 0;
+}
+
+</style>

@@ -1,0 +1,74 @@
+---
+title: "Markus Unkel"
+description:
+  "This is where I write down and share my thoughts, projects and experiences in
+  the hope that this will help here and there."
+---
+
+import TableFigure from "../components/TableFigure.astro";
+
+# Welcome
+
+[I am Markus](/about) a software engineer, inventor, computational and data
+scientist. This is where I write down and share my thoughts, projects and
+experiences.
+
+Your time is valuable, every single word is written by myself to provide
+original, non-inflated content.
+
+Please do not hesitate to [contact me](/#personal-information) with any
+feedback, questions or suggestions.
+
+## Plans for Q1'26
+
+- Researching a new Optimal Design Feature Selection (ODFS) algorithm that
+  integrates SFFS with D-, C-, and cost-optimality, allowing feature selection
+  and measurement design to be performed in an alternating framework. **[in
+  progress]**
+- Migrate infra within Hetzner from single server to k8s cluster and software
+  delivery platform from CaptainRover to KubeVela. **[in progress]**
+- Start building an open-source best-practice full-stack project for a
+  maintainable, safe, flexible and scalable web application:
+  - Frontend: Sveltekit + Houdini GraphQL
+  - Federated API: Apollo Router (graphql, apollo federation, relay)
+  - Backend: Rust + Seaorm (codegen from pg schema) + juniper
+  - DB: Postgres (sequin for cdc as default dual-write problem solution) + maybe
+    pg extension for authz and business logic with pgrx
+  - Zero downtime migration via pgroll
+  - Events: Nats Jetstream
+  - Durable execution: restate
+- Revisit reinforcement learning algorithms and implement them in Rust (burn).
+- Reboot [quantum-simulation.de](//quantum-simulation.de) project by migrating
+  the heavy computation part from javascript to WASM in Rust (maybe leptos
+  full-stack framework + bevy for rendering) and improve the UX.
+
+## Personal Information
+
+<TableFigure fig="A" caption="Personal Information.">
+<address>
+
+| Key                                    | Value                                                                                                     |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Name                                   | Markus Unkel                                                                                              |
+| Git                                    | [codeberg/maunke](//codeberg.org/maunke)                                                                  |
+| Email <br /><small>(private)</small>   | [markus@unkel.io](mailto:markus@unkel.io) (PGP: [C05F0B6831A0BC1E](/publickey.txt))                       |
+| Email <br /><small>(freelance)</small> | [contact@markusunkel.tech](mailto:contact@markusunkel.tech) (PGP: [518CDF7F0DCF740A](/publickey-mut.txt)) |
+| Phone                                  | [+4917686606827](tel:+4917686606827)                                                                      |
+| Fax                                    | +494039903555                                                                                             |
+| Mastodon                               | <a rel="me" href="https://mastodon.social/@maunke">@maunke</a>                                            |
+| Linkedin                               | [in/markusunkel](//linkedin.com/in/markusunkel)                                                           |
+| RSS Feed                               | [/rss.xml](/rss.xml)                                                                                      |
+
+</address>
+</TableFigure>
+
+## FOSS Projects
+
+<TableFigure fig="B" caption="Free and open-source projects.">
+
+| Project                                       | Description                                                                              |
+| --------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| [odesign](//odesign.rs)                       | An optimal design of experiments library written in pure rust.                           |
+| [quantum-simulation](//quantum-simulation.de) | Quantum physics interactive simulation of a quantum wave packet in arbitrary potentials. |
+
+</TableFigure>

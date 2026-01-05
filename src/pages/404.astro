@@ -1,0 +1,29 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import TableFigure from '../components/TableFigure.astro';
+import Diagram from '../components/Diagram.mdx';
+import DiagramFigure from '../components/DiagramFigure.astro';
+import NotFoundImg from '../assets/404.svg';
+import { Image } from 'astro:assets';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Page not found" description="The status code of this page is the number of strokes within the image." image={NotFoundImg} />
+	</head>
+	<body>
+		<div class="container">
+		<Header />
+		<main>
+			<h1>404 Page Not Found</h1>
+
+			<Image src={NotFoundImg} alt="Drawing of 404 handwritten strokes." />
+
+		</main>
+		<Footer />
+		</div>
+	</body>
+</html>

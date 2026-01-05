@@ -1,0 +1,167 @@
+```d2 width=640
+direction: down
+
+cep: Customer\nEngagement\nPlatform {
+  label.near: outside-top-right
+
+  notify: Canvas \n Message Step \n Webhook {
+    style: {
+      fill: "#a0a793"
+    }
+  }
+  api: API-Triggered \n Canvas {
+    style: {
+      fill: "#a0a793"
+    }
+  }
+
+  message: Message {
+    shape: page
+    style: {
+      fill: "#c0beae"
+    }
+  }
+
+  notify -- message
+
+  *.style {
+    stroke-width: 1
+  }
+  style {
+    stroke-dash: 0
+  }
+}
+
+service: Prio-Based Rate Limiting Service {
+  label.near: outside-top-right
+
+  api: API + Producer {
+    style {
+      fill: "#a0a793"
+      stroke-width: 1
+    }
+  }
+
+  api -> queue.p1 {
+    style {
+      stroke-width: 4
+    }
+  }
+  api -> queue.p2
+  api -> queue.pN
+
+
+  queue: Message\nQueue\nSystem {
+    label.near: outside-right-center
+
+    p1: Queue Prio 1
+    p2: Queue Prio 2
+    pN: Queue Prio N
+    p*.shape: queue
+    *.style {
+      fill: "#a0a793"
+      stroke-width: 1
+    }
+    style {
+      fill: "#c0beae"
+      stroke-width: 0
+    }
+  }
+
+  queue.p1 -> worker.p1 {
+    style {
+      stroke-width: 4
+    }
+  }
+  queue.p2 -> worker.p2
+  queue.pN -> worker.pN
+
+  worker: Rate\nLimiting\nWorker\nPools {
+    label.near: outside-right-center
+
+    p1: Worker Pool\nPrio 1
+    p2: Worker Pool\nPrio 2
+    pN: Worker Pool\nPrio N
+    *.style {
+      fill: "#a0a793"
+      stroke-width: 1
+    }
+    style {
+      fill: "#c0beae"
+      stroke-width: 0
+    }
+  }
+
+  worker.p1 <-> kv {
+    style {
+      stroke-width: 4
+    }
+  }
+  worker.p2 <-> kv
+  worker.pN <-> kv
+
+  kv: Key-Value DB:\nReservations\n+ Deduplication
+  kv.shape: cylinder
+  kv.style {
+    stroke-width: 1
+    fill: "#a0a793"
+  }
+
+}
+
+
+cep.message -> service.api
+service.worker.p1 -> cep.api
+service.worker.p2 -> cep.api
+service.worker.pN -> cep.api
+
+style {
+  fill: transparent
+}
+
+
+
+**.style {
+  bold: false
+  font-size: 32
+  text-transform: none
+  font-color: "#050315"
+  fill-pattern: none
+}
+
+*.style {
+  fill: transparent
+  fill-pattern: none
+  stroke-width: 1
+  double-border: false
+}
+
+
+(*** -> ***)[*] : {
+  style {
+    stroke-width: 2
+    stroke: "#050315"
+  }
+  target-arrowhead: {
+    shape: arrow
+    style {
+      filled: true
+    }
+  }
+}
+
+(*** <-> ***)[*] : {
+  style {
+    stroke-dash: 6
+    stroke-width: 2
+    stroke: "#050315"
+  }
+  target-arrowhead: {
+    shape: arrow
+    style {
+      filled: true
+    }
+  }
+}
+
+```
