@@ -1,0 +1,75 @@
+(defcfg
+  input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+  output (uinput-sink "KMonad output")
+  ;;"/bin/sleep 1 && /bin/setxkbmap de -option compose:ralt")
+
+  ;; Comment this is you want unhandled events not to be emitted
+  fallthrough true
+)
+
+;; DE
+(defsrc
+  esc        f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12    pause  prnt  ins  del
+ grv           1    2    3    4    5    6    7    8    9    0    -     =      bspc              home
+   tab        q    w    e    r    t    y    u    i    o    p    [     ]	     ret             pgup
+  caps       a    s    d    f    g    h    j    k    l    ;   '  \ pgdn
+  lsft 102d  z    x    c    v    b    n    m    ,    .    /                 up                end
+  lctl       lmet lalt      spc       ralt cmps rctl                 left   down   rght
+  )
+
+(deflayer base
+   XX          f1    f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12    XX XX XX XX
+   XX      XX  q     w    f    p    b    del  bspc j    l    @u    z          XX   XX
+   XX          @a     r    @s    t    g    tab  ret  m    n    e    i     @o     XX  XX
+  esc     y x     c    d    v     XX   XX    k    h    ,    .    XX                  XX
+  XX         XX     XX    XX    XX    lsft    lctl  @navi     XX    spc    XX     XX    XX XX
+  XX      lmet  lalt    lmet    @sym  cmps rctl                 left   down   rght
+  )
+
+
+(deflayer symbols
+  XX          XX    XX   XX   XX  XX  XX   XX   XX   XX   XX  XX   XX    XX  XX  XX  XX
+  XX         XX  @at     @gt    @q    @|    @!    XX  XX XX    7    8    9            XX               XX
+  XX          @sl     @bc    @br    @cl    @co    XX  XX  0    4    5    6     XX    XX                   XX
+  XX    @h @st     @mn    @un    @eq     XX   XX    XX    1    2    3                               XX
+  XX             XX     XX    XX    XX    XX    XX XX     XX    XX    spc    XX     XX      XX        XX
+  XX       XX  XX    XX       XX XX XX                 XX   XX   XX
+  )
+
+
+(deflayer navi
+  XX          XX    XX   XX   XX  XX  XX   XX   XX   XX   XX  XX   XX    XX  XX  XX  XX
+  XX         XX  XX     XX    XX    XX    XX    XX  XX XX    up    XX    XX           XX               XX
+  XX          XX     XX    XX    XX    XX    XX  XX  pgup    left    down    right    XX XX                      XX
+  XX    XX XX     XX    XX    XX     XX   XX    XX    pgdn    XX    XX                         XX
+  XX             XX     XX    XX    XX    XX    XX XX     XX    XX    spc    XX     XX      XX        XX
+  XX       XX  XX    XX       XX XX XX                 XX   XX   XX
+  )
+
+(defalias
+  ;; umlaute
+  a (tap-hold 300 a ')
+  o (tap-hold 300 o ;)
+  u (tap-hold 300 u [)
+  s (tap-hold 300 s -)
+  ;; layers
+  sym (layer-toggle symbols)
+  navi (layer-toggle navi)
+  ;; symbols keys
+  pipe C-<
+  ! (tap-hold 300 S-- !)
+  | (tap-hold 300 RA-102d S-6)
+  q (tap-hold 300 S-2 S-\\)
+  gt (tap-hold 300 102d S-102d)
+  at (tap-hold 300 RA-q S-4)
+  co (tap-hold 300 S-. S-,)
+  cl (tap-hold 300 S-8 S-9)
+  br (tap-hold 300 RA-8 RA-9)
+  bc (tap-hold 300 RA-7 RA-0)
+  sl (tap-hold 300 S-7 RA--)
+  eq (tap-hold 300 S-0 S-5)
+  un (tap-hold 300 S-/ `)
+  mn (tap-hold 300 / ])
+  st (tap-hold 300 S-] RA-])
+  h (tap-hold 300 \ S-=)
+)

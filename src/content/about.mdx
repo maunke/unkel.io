@@ -1,0 +1,320 @@
+---
+title: About - Markus Unkel
+description:
+  "This is where I write down and share my thoughts, projects and experiences in
+  the hope that this will help here and there."
+showToc: true
+---
+
+import { Image } from "astro:assets";
+import TableFigure from "../components/TableFigure.astro";
+import ImageFigure from "../components/ImageFigure.astro";
+import MarkusImg from "../assets/markus.jpeg";
+import SignatureImg from "../assets/signature.svg";
+
+<h1>About</h1>
+
+<!-- toc -->
+
+Hello, I am Markus, 32 years old and live in Hamburg with my wife Sophia and our
+cretan hound Friedel.
+
+<ImageFigure
+  maxWidth={450}
+  src={MarkusImg}
+  fig="1"
+  caption="Me on a weekend morning with our cretan hound Friedel and a pour over coffee."
+/>
+
+I enjoy solving and preventing technical problems using software, computational
+and data science; mainly in Rust and Python.
+
+In Bonn I studied physics since it's an amazing discipline that tries to
+understand and describe the nature with a mixture of maths, human assumptions,
+analogies and experiments.
+
+Realizing that also in physics over the last decades more and more solutions are
+supported by computational and data science, I studied in that field in Jena.
+
+In 2015 I founded <a href="//colorfit.ai">ColorFit</a> to solve a printing
+industry problem of having a trial & error process before finally printing inks
+on substrate against all target colors. The solution is written down in a patent
+(granted in USA, ISR, IND; pending in EU and CN).
+
+After collecting all these tools I wanted to learn about how the German
+Mittelstand is solving problems in the triangle between physics, computational
+and data science by working in a small Data Lab in Dortmund. I have learned one
+very important thing: Before driving real innovation (creating valuable IP) in a
+company from outside you need to know more about the inside.
+
+That's why I started to work as a tech lead in a german packaging venture. With
+a mixture of brave and vision I build a prepress automation full-stack software
+from scratch. Customers are now getting prepress checks on their artworks and a
+realistic 3D model within seconds. That software is also the fundament that
+decouples completely the venture and every digital printing converter regarding
+all prepress requirements around artworks. All that saves a lot of money and
+time. More important, I had the pleasure to lead a tech team of talented
+developers incl. building up a tech culture.
+
+As software engineer and data scientist I am working as a freelancer by
+supporting companies to build, extend and scale their products.
+
+Best regards
+
+<div class="signature">
+  <Image src={SignatureImg} alt="Signature" />
+</div>
+
+## Professional Experience
+
+<TableFigure fig="A" caption="Professional Experience excluding many side
+projects over the years, e.g. several websites or building the LaTeX project of
+'Formelsammlung Wirtschaftsmathematik 3. Auflage , Franz W. Peren'."
+
+>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Date range</th>
+        <th>Workplace</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Present <br />
+          │| <br />
+          2022
+        </td>
+        <td>
+          <a href="/freelance">
+            <b>markusunkel.tech (MU:T)</b>
+          </a>
+          <br />
+          Freelance Software Engineer, Computational & Data Scientist
+          <ul>
+            <li>
+              Selection of clients: [Zalando](//zalando.de),
+              [Packiro](//packiro.com), [Bace](//bacehub.de),
+              [sparkplant](//sparkplant.io)
+            </li>
+            <li>Main programming languages: Rust, Python</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Present <br />
+          │| <br />
+          2015
+        </td>
+        <td>
+          <a href="//colorfit.ai">
+            <b>ColorFit</b>
+          </a>
+          <br />
+          Founder, Inventor, CEO
+          <ul>
+            <li>
+              Realizing prints without trial & error backed by machine learning
+              & physics
+            </li>
+            <li>
+              <a href="//patents.google.com/patent/US10838669B2">Patent</a>{" "}
+              granted in USA, IND, ISR; pending in CN and EU
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2022 <br />
+          │| <br />
+          2021
+        </td>
+        <td>
+          <a href="//packiro.com">
+            <b>Packiro</b>
+          </a>
+          <br />
+          Head of Technology, Software Architect & Engineer
+          <ul>
+            <li>IT Architecture, DevOps Foundation, Building tech team</li>
+            <li>
+              Design and development of a full-stack prepress automation service
+              incl. 3D Model renderings
+            </li>
+            <li>
+              Data & Marketing automation architecture: ClickHouse, Superset,
+              Rudderstack, Braze, Salesforce
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2020 <br />
+          │| <br />
+          2019
+        </td>
+        <td>
+          <b>WAYS</b>
+          <br />
+          Head of Technology, Computational & Data Scientist
+          <ul>
+            <li>Innovation projects in german mittelstand</li>
+            <li>
+              <a href="//www.bvb.de/de/de/aktuelles/news/news.html/News/Uebersicht/Zweiter-digitaler-Spieltag-fuer-Dortmunder-Gastronomie-Betriebe.html">
+                Platform for BVB (football club) to support bars in Dortmund due
+                to COVID
+              </a>
+            </li>
+            <li>
+              Proactive sales forecasting system for Point of Sale company by
+              automatically crawling information about openings and renovations
+              of retailers.
+            </li>
+            <li>Webapp jobcenterdortmund.de</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</TableFigure>
+
+## Patents
+
+<TableFigure fig="B" caption="Patents.">
+  <table>
+    <thead>
+      <tr>
+        <th>Filing year</th>
+        <th>Regions</th>
+        <th>Patent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2016</td>
+        <td>Granted in USA, IND, ISR; pending in EU, CN</td>
+        <td>
+          <a href="//patents.google.com/patent/US10838669B2">
+            <b>Printing method which includes selection of print parameters</b>
+          </a>
+          <br />
+          <ul>
+            <li>
+              Process and algorithm for minimizing the number of the trial &
+              error runs on gravure-/flexo printing machines
+            </li>
+            <li>Assignee: ColorFit and Siegwerk</li>
+            <li>Inventors: Frank Dauth, Rolf-Michael Steitz, Markus Unkel</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</TableFigure>
+
+## Education
+
+<TableFigure fig="C" caption="Education.">
+  <table>
+    <thead>
+      <tr>
+        <th>Date range</th>
+        <th>Degree programs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          2019 <br />
+          │| <br />
+          2017
+        </td>
+        <td>
+          <b>M.Sc. Computational and Data Science </b>
+          <small>(german grade: 1.3)</small>
+          <br />
+          Friedrich Schiller University Jena
+          <ul>
+            <li>
+              Focus topics: Scientific Computing, Big Data, Machine Learning,
+              Data Mining, Parallel Computing, Statistical Learning Theory,
+              Databases and Information Systems
+            </li>
+            <li>
+              Master thesis: A method for feature selection of (quasi-) linear
+              models regarding optimal design (a hybrid of SFFS, CD criteria and
+              arbitrary convex cost functions [e.g. measurements cost])
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2016 <br />
+          │| <br />
+          2012
+        </td>
+        <td>
+          <b>B.Sc. Physics </b>
+          <small>(german grade: 2.0)</small>
+          <br />
+          Rhenish Friedrich Wilhelm University of Bonn
+          <ul>
+            <li>
+              Advanced lectures: General relativity and cosmology, Algorithmic
+              thinking and imperative programming
+            </li>
+            <li>
+              Bachelor thesis: Numerical solutions of the time-dependent
+              Schrödinger equation with an interactive visualization (simulation
+              tool available at
+              [quantum-simulation.de](//quantum-simulation.de))
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2016 <br />
+          │| <br />
+          2012
+        </td>
+        <td>
+          <b>Abitur </b>
+          <small>(german grade: 1.2)</small>
+          <br />
+          Martinus-Gymnasium Linz am Rhein
+          <ul>
+            <li>Focus: mathematics, physics, social studies</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</TableFigure>
+
+## Working Setup
+
+<TableFigure fig="D" caption="Working setup.">
+
+| Key                                                       | Value                                                                                                 |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Working station <br /><small>(daily driver)</small>       | Mac Studio M4 Max (16C CPU, 40C GPU, 128GB, 4TB)                                                      |
+| Local linux server <br /><small>(heavy computing)</small> | i9 14900k, RTX 4090, 96GB RAM, 2\*2TB NVMe (watercooled system)                                       |
+| Display                                                   | Studio Display                                                                                        |
+| Keyboard                                                  | ZSA Moonlander on [custom colemak mod-dh layout](/blog/colemak-mod-dh)                                |
+| Sound Input                                               | Sennheiser MD 441 U, RODECaster Duo                                                                   |
+| Camera                                                    | Sony ZV-E10, Sigma 16mm F1.4                                                                          |
+| Travel laptop                                             | MBA M2                                                                                                |
+| Timer                                                     | [Time Timer® RETRO](//www.timetimer.com/products/time-timer-retro-eco-edition?variant=41022543298658) |
+| Terminal                                                  | [Rio](//rioterm.com)                                                                                  |
+| Shell                                                     | Fish (Oh My Posh)                                                                                     |
+| Editor                                                    | [Helix](//helix-editor.com)                                                                           |
+| Email client                                              | [aerc](//aerc-mail.org)                                                                               |
+
+</TableFigure>

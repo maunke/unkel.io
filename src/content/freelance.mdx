@@ -1,0 +1,292 @@
+---
+title: Markus Unkel - Freelance Software Engineer and Data Scientist
+description:
+  "I work as a freelance software engineer, computational and data scientist
+  based in Hamburg, Germany."
+previewImage: "../assets/desk-avatar.png"
+showToc: true
+---
+
+import TableFigure from "../components/TableFigure.astro";
+import DiagramFigure from "../components/DiagramFigure.astro";
+import CaseCEPDiagram from "../assets/case-cep-api-rate-limiting.mdx";
+import FullStackDiagram from "../assets/full-stack-mut.mdx";
+import ImageFigure from "../components/ImageFigure.astro";
+import MarkusImg from "../assets/desk-avatar.png";
+import FullStackConceptDiagram from "../assets/full-stack-concept.mdx";
+
+<h1>MU:T</h1>
+
+<!-- toc -->
+
+Under markusunkel.tech (MU:T), I work as a freelance software engineer,
+computational and data scientist based in Hamburg, Germany, with my office in
+the new [Deutschlandhaus](//deutschlandhaus.com/en).
+
+<ImageFigure
+  maxWidth={450}
+  src={MarkusImg}
+  fig="1"
+  caption="Remote working view of my workspace. Wall art painted by <a href='//instagram.com/_anne_malt/'>Anne Heller</a>."
+/>
+
+MU:T means bravery in German and controlled change in Rust, and describes my way
+of working: challenging assumptions, experimenting safely outside your project,
+and making deliberate decisions that move it in the right direction.
+
+I solve and prevent technical problems by writing concepts, designing
+architectures, and implementing solutions primarily in Rust and Python. With a
+background in [physics, computational and data science](/about#education), I
+have spent my [career](/about#professional-experience) turning complex,
+theory-heavy domains into reliable, scalable software systems. This includes
+founding a company with [patented technology](/about#patents) in the printing
+industry, building automation and data-driven products from scratch, and leading
+engineering teams.
+
+## Clients
+
+<TableFigure fig="A" caption="Selection of clients and project roles.">
+
+| Client                        | Role                                                                                    |
+| ----------------------------- | --------------------------------------------------------------------------------------- |
+| [Zalando](//zalando.com)      | Software Architect & Engineer                                                           |
+| [Packiro](//packiro.com)      | Preflight Expert, Software Engineer, Data Scientist                                     |
+| [Bace](//bacehub.de)          | Platform Solution Architect for Founder Team, Software Engineer, Hiring Rust Developers |
+| [Sparkplant](//sparkplant.io) | MarTech & BI Solution Architect                                                         |
+| [The Arc](//thearc.de)        | E-Commerce Solution Architect, Data Scientist                                           |
+
+</TableFigure>
+
+I work on business-critical systems and intellectual property for my clients.
+For this reason, detailed project descriptions remain confidential.
+
+Instead, I focus on generalized system patterns, problem classes, and
+architectural concepts drawn from client projects, which you can find further
+down in the section
+[anonymized system concepts by client projects](#anonymized-system-concepts-by-client-projects).
+
+## What You Can Expect
+
+- Clear, direct communication.
+- Outcome-driven thinking: strategy first, execution second.
+- Sustainable solutions designed for handover and long-term ownership; no
+  single-point dependency.
+- Radical honesty about fit, yours and mine.
+
+## Commercial Terms
+
+<TableFigure fig="B" caption="Engagement models and billing terms.">
+
+| Engagement Model | Terms                            |
+| ---------------- | -------------------------------- |
+| Time             | €150/hour, billed monthly        |
+| Fixed Scope      | Pricing after roadmap definition |
+
+</TableFigure>
+
+## How We Get Started
+
+1. Get in touch via email
+   [contact@markusunkel.tech](mailto:contact@markusunkel.tech), phone
+   [+4917686606827](tel:+4917686606827) or one of my listed contact
+   [channels](/#personal-information).
+1. We get to know each other and your project in a 45-minute video call;
+   optionally while walking around the Binnenalster in Hamburg or at your
+   favored location.
+1. Depending on the project, you receive a clear proposal with scope, timeline
+   and next steps.
+1. We start building.
+
+## Engineering Stack & Expertise
+
+This section highlights technologies I have used extensively in production
+systems. These are areas where I bring hands-on experience, architectural
+judgment, and long-term ownership; not just familiarity.
+
+<DiagramFigure fig="2" caption="Full-stack architecture elements." width={275}>
+  <FullStackDiagram />
+</DiagramFigure>
+
+<TableFigure fig="C" caption="Frequently applied technologies in client projects. I select tools based on problem constraints, team context, and operational requirements. I am fully comfortable adapting to existing stacks or introducing alternatives when a project benefits from it.">
+
+| Full-Stack Element                    | Frequently Applied Technologies                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Messaging System                      | [NATS](//nats.io), [RabbitMQ](//rabbitmq.com), [Amazon SQS](//aws.amazon.com/sqs), [Fluvio](//fluvio.io)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Data Warehouse OLAP, BI, MarTech, CRM | [ClickHouse](//clickhouse.com), [dbt](//getdbt.com), [Superset](//superset.apache.org), [Braze](//braze.com), [RudderStack](//rudderstack.com), [Salesforce](//salesforce.com), [HubSpot](//hubspot.com)                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Task Orchestration                    | [Hatchet](//hatchet.run), [restate](//restate.dev), [Celery](//docs.celeryq.dev), [Airflow](//airflow.apache.org)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Machine Learning                      | \{[JAX](//jax.dev), [Burn](//burn.dev), [Scipy](//scipy.org), [Numpy](//numpy.org), [OpenCV](//opencv.org), [faer](//faer.veganb.tw)\}, \{[Pandas](//pandas.org), [Polars](//pola.rs)\}, \{[Plotly](//plotly.com), [matplotlib](//matplotlib.org)\}                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Database                              | [PostgreSQL](//postgres.org) (zero-downtime migration via [pgroll](//pgroll.com)), [MongoDB](//mongodb.com), [Redis](//redis.com)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Backend                               | Rust: [Axum](//github.com/tokio-rs/axum) + \{[async-graphql](//github.com/async-graphql/async-graphql), [Juniper](//github.com/graphql-rust/juniper)\} + \{[sqlx](//github.com/launchbadge/sqlx), [SeaORM](//github.com/seaql/sea-orm)\} + \{[cargo-nextest](//nexte.st), [cargo-deny](//github.com/EmbarkStudios/cargo-deny)\}<br />Python: \{[FastAPI](fastapi.tiangolo.com), [LiteStar](//litestar.dev), [Starlette](//starlette.dev)\} + [Pydantic](//pydantic.dev) + [strawberry](//strawberry.rocks) + \{[psycopg](//psycopg.org/psycopg3), [SQLAlchemy](//sqlalchemy.org)\} + \{[pytest](//pytest.org), [bandit](//github.com/PyCQA/bandit)\} |
+| API                                   | [Apollo Router](//github.com/apollographql/router) ([Apollo Federation](//apollographql.com/docs/graphos/schema-design/federated-schemas/federation) + [Relay Spec](//relay.dev/docs/guides/graphql-server-specification))                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Frontend                              | \{[SvelteKit](//svelte.dev/docs/kit), [astro](//astro.build)\} + [Houdini](//houdinigraphql.com) (Relay) + [Tailwind CSS](//tailwindcss.com) + [Shadcn](//shadcn-svelte.com) + \{[vitest](//vitest.dev) + [Playwright](//playwright.dev)\}                                                                                                                                                                                                                                                                                                                                                                                                           |
+
+</TableFigure>
+
+<TableFigure fig="D" caption="Infra, DevOps and other related technologies I used in projects.">
+
+| Area                          | Frequently Used Technologies                                                                                                                                        |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Infrastructure and management | [Kubernetes](//kubernetes.io), [Helm](helm.sh), [KEDA](//keda.sh), [Docker](//docker.io)                                                                            |
+| Monitoring                    | [Sentry](//sentry.io), [Grafana Stack](//grafana.com), [Jaeger](//jaegertracing.io)                                                                                 |
+| DevOps                        | [GitLab](//gitlab.com), [GitHub](//github.com), [Forgejo](//forgejo.org)                                                                                            |
+| Providers                     | [AWS](//aws.amazon), [Hetzner](//hetzner.com), [DigitalOcean](//digitalocean.com), [Wasabi](//wasabi.com), [HostEurope](//hosteurope.de), [GCP](//cloud.google.com) |
+| Typesetting systems           | [typst](//typst.app), [LaTeX](//latex-project.org)                                                                                                                  |
+
+</TableFigure>
+
+## Anonymized System Concepts by Client Projects
+
+- [Priority-Based Rate Limiting Service](#priority-based-rate-limiting-service)
+- [Full-Stack Growth Architecture](#full-stack-growth-architecture)
+
+### Priority-Based Rate Limiting Service
+
+**Challenge**
+
+The rate of notifications sent out via a customer engagement platform (CEP) to
+my clients customers needs to be limited. By introducing a rate limit, messages
+get a priority label that is required when the rate cap takes effect.
+Furthermore there is an API rate limit on CEP's side that should be handled
+gracefully. The sum of all notifications $x$ sent out within a time range
+$\Delta t$ should be smaller than the rate limit $R$ for any given point in time
+$t$:
+
+$$
+\sum_{x \in X} \left[t - \Delta t \lt t^{out}_x \le t\right] = N(t) \le R
+$$
+
+We notice the time of receiving the intention that a notification $x$ should be
+sent out with $t^{in}_x$. The priorization of a notification is noticed by $p_x$
+such that we need to guarantee, that
+
+$$
+p_x < p_y \wedge t^{in}_x = t^{in}_y\Rightarrow t^{out}_x < t^{out}_y +
+\epsilon
+$$
+
+such that prio 1 notifications are priotized in favor of prio 2 notifications
+within a tolerance of $\epsilon$. Furthemore we want to weakly guarantee that we
+are following the FIFO principal for notifications with the same prio $p$, such
+that
+
+$$
+p_x = p_y \wedge t^{in}_x < t^{in}_y \Rightarrow t^{out}_x < t^{out}_y +
+\epsilon
+$$
+
+holds.
+
+**Solution Design**
+
+Messages are queued by priority. Each prio queue has a scalable consumer group
+of workers that are all sharing its reservation volume information in a
+Key-Value DB. This means that a worker with prio $p$ with a reserved volume
+$V_p$ (valid for a specified TTL) is allowed to process $V_p$ messages. If the
+sum of reserved volumes exceeds the global rate limit volume, the requesting
+worker with prio $p$ sets the rate-limit-hitted:p with a specified rate-limit
+hitted TTL, such that all requesting workers with priority $r > p$ cannot
+reserve a message volume until the restriction is resolved.
+
+Furthermore deduplication is ensured by using message hashes as deduplication
+keys with a specified deduplication TTL in the key-value database.
+
+Unprocessable (not accepted by CEP) messages are moved to a dead letter queue.
+
+<DiagramFigure
+  fig="3"
+  width={640}
+  caption="Architecture of a prio-based rate limiting service in combination with a customer engagement platform."
+>
+  <CaseCEPDiagram />
+</DiagramFigure>
+
+**Result**
+
+The implementation handled successfully the targeted api input pressure of 2
+Mio. mgs/s with a median latency of ~50ms and processed highest prio messages
+with a median latency of ~250ms (incl. latency of calling CEP) between $t^{in}$
+and $t^{out}$.
+
+### Full-Stack Growth Architecture
+
+**Challenge**
+
+An architecture needs to be designed for an early-stage product expected to
+evolve rapidly based on its first key accounts, while the teams scaled in
+parallel.
+
+Planned and required components:
+
+- Mobile and web applications
+- Services: E-Commerce, CMS, Core, Authentication, Notifications
+- Data-driven real-time decisions based on customer activities
+- Key account specific services
+- CRM and CEP (customer engagement platform)
+- API for 3rd Party Services
+
+The stack should be sustainable in terms of investment and technical debts.
+
+**Solution Design**
+
+Before diving into the solution; in my experience, there are two general options
+to solve these broad challenge strategically:
+
+1. Planning a relaunch budget from the beginning on in order to fully focus on
+   the first features (not on architecture) for the first key accounts by
+   risking the rise of technical debts and a substantial day-2 operations
+   overhead which will cause a relaunch which in turn can jeopardize the
+   business model and cash flow later.
+1. Invest upfront into an architecture that strategically allows to grow in
+   terms of complexity, team sizes and changing business requirements which in
+   turn allows the company to specifically hire new employees by having the
+   architecture evolvement in mind.
+
+The client has chosen the second option by relying on the following strategical
+and technical elements implied by the architecture drawn below in figure 4.
+
+<DiagramFigure
+  fig="4"
+  width={450}
+  caption={
+    "Full-Stack Growth Architecture that allows to grow vertically and horizontally depending on key accounts specific roadmap in the first two years."
+  }
+>
+  <FullStackConceptDiagram />
+</DiagramFigure>
+
+- **Single source of truth (SSOT) / One Contract**: When having changing
+  business requirements, the most important part is the information
+  architecture, meaning the business graph model that is reflected in the
+  federated api schema and in the process workflows on service layer / messaging
+  system. This allows to have a contract between the different teams to work and
+  plan on, e.g. the marketing automation team knows which events can be used to
+  build journeys on or a key account manager can discuss with the tech leads the
+  implications of new features in a dialogue (no one-way communication).
+
+- **MVP**: The MVP was designed to validate the business model while already
+  establishing the architectural backbone required for growth:
+  1. Establish the core information architecture by implementing the most
+     critical services on the service layer.
+  1. Expose a stable contract via a federated API to enable early mobile and web
+     applications.
+  1. Introduce event tracking and messaging to support initial KPIs, customer
+     journeys, and the customer data pipeline that ingests raw customer data
+     into the data warehouse and CEP / CRM.
+
+- **Growth**: The growth phase extended the same architectural principles to
+  support more teams, higher traffic and key-account-specific requirements;
+  without restructuring the core system:
+  1. Scale team onboarding by using the SSOT and One Contract as a shared
+     planning and implementation reference.
+  1. Expand analytics and activation capabilities by introducing ETL and Reverse
+     ETL components as requirements by sales, marketing, business and UX teams
+     matured.
+  1. Grow horizontally with new key account specific features and services
+     without leaving the architecture.
+
+**Result**
+
+As business requirements shifted significantly in the first year, the
+architecture absorbed change without major rework. Services were added and
+deprecated without destabilizing the platform, allowing engineers to stay
+focused on product delivery instead of repeated architectural resets.

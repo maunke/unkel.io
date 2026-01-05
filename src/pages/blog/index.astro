@@ -1,0 +1,62 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import TableFigure from '../../components/TableFigure.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<div class="container">
+		<Header />
+		<main>
+			<section>
+				<h1>Blog</h1>
+				<p>
+				I am writing about technical topics, my projects, research, proof of concepts and my experience as a tech freelancer. You can subscribe to this blog via the <a href="/rss.xml">RSS feed</a>.
+				</p>
+				<TableFigure fig="A" caption="List of blog entries.">
+					<table>
+						<thead>
+							<tr>
+								<th style="width: 11ch">Date</th>
+								<th>Title</th>
+							</tr>
+						</thead>
+						<tbody>
+						{
+							posts.map((post) => (
+								<tr>
+									<td>
+											<FormattedDate date={post.data.pubDate} />
+									</td>
+									<td>
+										<a href={`/blog/${post.id}`}>
+										{post.data.title}
+										</a>
+									</td>
+								</tr>
+							))
+						}
+						</tbody>
+						</table>
+					</TableFigure>
+			</section>
+		</main>
+		<Footer />
+		</div>
+	</body>
+</html>

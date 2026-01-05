@@ -1,0 +1,21 @@
+---
+import FooterLink from './FooterLink.astro';
+---
+
+<footer>
+	<div style="line-height: 1.8;"><span>Content under CC BY 4.0</span></div>
+	<div style="flex-grow:1;"></div>
+	<div style="display: flex; gap: 20px;">
+		<FooterLink href={"/legal"}>Legal</FooterLink>
+		<FooterLink href={"/privacy"}>Privacy</FooterLink>
+	</div>
+</footer>
+<style>
+	footer {
+		display: flex;
+		border-top: 1px dashed var(--black);
+		margin-top: 16px;
+		margin-bottom: 16px;
+		font-size: 9pt;
+	}
+</style>

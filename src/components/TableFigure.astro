@@ -1,0 +1,33 @@
+---
+interface Props {
+	src: ImageMetadata;
+  fig: number;
+  caption: string;
+}
+
+const { fig, caption } = Astro.props;
+
+import { Image } from 'astro:assets';
+---
+
+<figure>
+  <slot />
+  <figcaption>
+    <span style="font-style: normal;">Table {fig}:</span> {caption}
+  </figcaption>
+</figure>
+
+<style>
+figcaption {
+	font-style: italic;
+  padding: 8px 0;
+  padding-left: 4px;
+  border-top: 1px dashed var(--black);
+  font-size: 9pt;
+}
+
+figure {
+  display: block;
+  margin: 24px 0 16px 0;
+}
+</style>

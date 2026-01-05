@@ -1,0 +1,32 @@
+```d2 width=400
+shape: sequence_diagram
+direction: right
+installation -> configuration
+test -> installation
+configuration -> test
+
+style {
+  fill: transparent
+}
+
+*.style {
+  fill: "#050315"
+  font-color: "#ddd6cc"
+  stroke-width: 1
+  font-size: 16
+  stroke: "#050315"
+}
+(*** -> ***)[*]: {
+  style {
+    stroke-width: 1
+    stroke: "#050315"
+  }
+  target-arrowhead: {
+    shape: arrow
+    style {
+      filled: true
+    }
+  }
+}
+
+```
