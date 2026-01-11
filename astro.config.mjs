@@ -20,6 +20,9 @@ export default defineConfig({
     experimental: {
         svgo: true
     },
+    build: {
+        inlineStylesheets: 'always'
+    },
     integrations: [customToc({maxDepth: 2,
     template:(html) => {
     return `
