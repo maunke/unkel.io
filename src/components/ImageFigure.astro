@@ -12,7 +12,7 @@ import { Image } from 'astro:assets';
 
 <figure>
   <div class="figure-img" style={maxWidth ? `max-width: ${maxWidth}px`:''}>
-    <Image src={src} alt={caption} />
+    <Image src={src} alt={caption} fetchpriority={fig == "1" ? "high": "auto"} loading={fig == "1" ? "eager": "lazy"}/>
   </div>
   <figcaption>
     <span style="font-style: normal;">Figure {fig}:</span> <Fragment set:html={caption} />
